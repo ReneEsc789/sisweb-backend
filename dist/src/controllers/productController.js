@@ -40,7 +40,7 @@ const createProduct = (req, res) => {
     });
 };
 exports.createProduct = createProduct;
-// Retrieve all Products from the database.
+// Retrieve all Products from the database. 
 // Get all products using promises
 const getAllProducts = (req, res) => {
     // Calling the sequelize finAll method. This is the same that a SELECT * FROM PRODUCT  in a SQL Query 
