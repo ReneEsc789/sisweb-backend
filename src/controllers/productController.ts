@@ -13,7 +13,7 @@ export const createProduct : RequestHandler = (req:Request, res: Response) => {
     }
     // Save Product in the database 
     const product = {...req.body};
-    Product.create(product)
+    Product.create(product) 
     .then((data: Product | null) => {
         res.status(200).json({
             status: "success",
@@ -30,7 +30,7 @@ export const createProduct : RequestHandler = (req:Request, res: Response) => {
     });
 };
 
-// Retrieve all Products from the database.
+// Retrieve all Products from the database. 
 // Get all products using promises
 export const getAllProducts: RequestHandler = (req:Request, res:Response) => {
     // Calling the sequelize finAll method. This is the same that a SELECT * FROM PRODUCT  in a SQL Query 

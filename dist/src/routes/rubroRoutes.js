@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const rubroController_1 = require("../controllers/rubroController");
+const rubroRouter = (0, express_1.Router)();
+rubroRouter.get('/', rubroController_1.getAllRubros);
+rubroRouter.get('/:id', rubroController_1.getRubrosById);
+rubroRouter.post('/', rubroController_1.createRubro);
+rubroRouter.patch('/:id', rubroController_1.modifyRubro);
+rubroRouter.delete('/', rubroController_1.deleteRubro);
+exports.default = rubroRouter;
